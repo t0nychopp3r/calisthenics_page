@@ -1,5 +1,13 @@
 <template>
+  <div class="header">
+    <ProfileHeader />
+  </div>
   <div>
-    <NuxtWelcome />
+    <NuxtLayout>
+      <NuxtPage/>
+    </NuxtLayout>
+  </div>
+  <div class="footer">
+    <ProfileFooter />
   </div>
 </template>
