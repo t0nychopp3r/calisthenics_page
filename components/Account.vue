@@ -66,7 +66,7 @@ async function signOut() {
     <div class="center-column">
     <div>
       <label for="email">Email</label>
-      <input id="email" type="text" :value="session.user.email" disabled />
+      <input id="email" type="text" :value="user.email" disabled />
     </div>
     <div>
       <label for="username">Name</label>

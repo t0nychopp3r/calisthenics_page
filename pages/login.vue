@@ -5,6 +5,7 @@
 <template>
   <div class="container-logs">
     <div class="left-column">
+      <h2> Workouts </h2>
       <p> Placeholder left column e.g. overview Workouts </p>
     </div>
     <div class="middle-column">
