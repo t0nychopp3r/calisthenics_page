@@ -17,7 +17,7 @@ const { data } = await supabase
 
 if (data) {
   username.value = data.username
-  website.value = data.website
+  //website.value = data.website
   avatar_path.value = data.avatar_url
 }
 
@@ -67,17 +67,22 @@ async function signOut() {
     <div>
       <label for="email">Email</label>
       <input id="email" type="text" :value="user.email" disabled />
+      <br/>
     </div>
     <div>
       <label for="username">Name</label>
       <input id="username" type="text" v-model="username" />
+      <br/>
+      <br/>
     </div>
+    <!--
     <div>
       <label for="website">Website</label>
       <input id="website" type="url" v-model="website" />
       <br/>
       <br/>
     </div>
+    -->
     <div>
       <input
         type="submit"
