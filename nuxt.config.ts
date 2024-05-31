@@ -18,6 +18,13 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase'
   ],
   supabase:{
-    redirect: false
+    redirect: false,
+    redirectOptions: {
+      login: '/login',
+      callback: '/confirm',
+      include: undefined, // Define routes to include, if any
+      exclude: [], // Define routes to exclude, if any
+      cookieRedirect: false,
+    }
   }
 });
