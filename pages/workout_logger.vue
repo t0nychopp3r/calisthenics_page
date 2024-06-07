@@ -168,14 +168,11 @@
 
 
 <template>
-    <div class="container-logs">
-      <div class="left-column">
-      </div>
       <div class="middle-column">
         <p class="title-text">Welcome to your personal program space</p>
         <br/>
         <div class="form-workouts">
-          <h2> Workout hinzufügen </h2>
+          <h2> Add a Workout </h2>
             <div class="input-row">
               <input type="text" v-model="newWorkoutName" placeholder="Workout Name" class="workout-input" />
               <input type="text" v-model="newStreetPark" placeholder="Street Park" class="workout-input" />
@@ -186,27 +183,26 @@
             <button class="button_table_green" @click="addWorkoutLog">Add Workout</button>
             <br/>
         </div>
-        <h2> Deine Workouts </h2>
+      </div>
+
+      <div class="workout-logs">
+        <h2> Your Workouts </h2>
         <table>
           <thead>
             <tr>
-              <th>Datum / Zeit</th>
               <th>Workout Name</th>
-              <th>Notes</th>
               <th>Street Park</th>
               <th>Workout Date</th>
+              <th>Notes</th>
               <th>Satisfaction</th>
-              <th class="button_col"></th> <!-- Space for the button -->
+              <th>Date / Time</th>
+              <th class="button_col"></th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(workoutLog, index) in workoutLogsArray" :key="index">
-              <td data-label="Datum / Zeit">{{ formatDate(workoutLog.created_at) }}</td>
               <td data-label="Workout Name">
                 <input type="text" v-model="workoutLog.workout_name" class="table_input" />
-              </td>
-              <td data-label="Notes">
-                <input type="text" v-model="workoutLog.notes" class="table_input" />
               </td>
               <td data-label="Street Park">
                 <input type="text" v-model="workoutLog.street_park" class="table_input" />
@@ -214,9 +210,13 @@
               <td data-label="Workout Date">
                 <input type="date" v-model="workoutLog.workout_date" class="table_input" />
               </td>
+              <td data-label="Notes">
+                <input type="text" v-model="workoutLog.notes" class="table_input" />
+              </td>
               <td data-label="Satisfaction">
                 <input type="number" min="1" max="10" v-model="workoutLog.satisfaction" class="table_input" />
               </td>
+              <td data-label="Datum / Zeit">{{ formatDate(workoutLog.created_at) }}</td>
               <td class="form-workouts">
                 <button class="button_table_green" @click="updateWorkoutLog(workoutLog.id,
                                                                             workoutLog.workout_name,
@@ -230,7 +230,4 @@
           </tbody>
         </table>
       </div>
-      <div class="right-column">
-      </div>
-    </div>
   </template>
