@@ -68,6 +68,7 @@ async function signOut() {
       <label for="email">Email</label>
       <input id="email" type="text" :value="user.email" disabled />
       <br/>
+      <br/>
     </div>
     <div>
       <label for="username">Name</label>
@@ -75,14 +76,13 @@ async function signOut() {
       <br/>
       <br/>
     </div>
-    <!--
     <div>
-      <label for="website">Website</label>
+      <label for="website">Instagram</label>
       <input id="website" type="url" v-model="website" />
       <br/>
       <br/>
+      <br/>
     </div>
-    -->
     <div>
       <input
         type="submit"
@@ -92,6 +92,7 @@ async function signOut() {
       />
     </div>
     <div>
+      <br/>
       <button class="button block" @click="signOut" :disabled="loading">Sign Out</button>
     </div>
     </div>

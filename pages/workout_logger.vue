@@ -170,19 +170,21 @@
 <template>
     <div class="container-logs">
       <div class="left-column">
-        <h2> Workouts </h2>
       </div>
       <div class="middle-column">
         <p class="title-text">Welcome to your personal program space</p>
         <br/>
-        <div class="form">
+        <div class="form-workouts">
           <h2> Workout hinzufügen </h2>
-          <input type="text" v-model="newWorkoutName" placeholder="Workout Name" />
-          <input type="text" v-model="newNotes" placeholder="Notes" />
-          <input type="text" v-model="newStreetPark" placeholder="Street Park" />
-          <input type="date" v-model="newWorkoutDate" placeholder="Workout Date" />
-          <input type="number" min="1" max="10" v-model="newSatisfaction" placeholder="Satisfaction" />
-          <button class="button_table_green" @click="addWorkoutLog">Add Workout</button>
+            <div class="input-row">
+              <input type="text" v-model="newWorkoutName" placeholder="Workout Name" class="workout-input" />
+              <input type="text" v-model="newStreetPark" placeholder="Street Park" class="workout-input" />
+            </div>
+            <input type="date" v-model="newWorkoutDate" placeholder="Workout Date" class="date-input" />
+            <textarea v-model="newNotes" placeholder="Notes" class="notes-input"></textarea>
+            <input type="number" min="1" max="10" v-model="newSatisfaction" placeholder="Satisfaction" class="satisfaction-input" />
+            <button class="button_table_green" @click="addWorkoutLog">Add Workout</button>
+            <br/>
         </div>
         <h2> Deine Workouts </h2>
         <table>
@@ -215,7 +217,7 @@
               <td data-label="Satisfaction">
                 <input type="number" min="1" max="10" v-model="workoutLog.satisfaction" class="table_input" />
               </td>
-              <td class="button_col">
+              <td class="form-workouts">
                 <button class="button_table_green" @click="updateWorkoutLog(workoutLog.id,
                                                                             workoutLog.workout_name,
                                                                             workoutLog.notes,
@@ -229,7 +231,6 @@
         </table>
       </div>
       <div class="right-column">
-        <p> Placeholder right column e.g. Street Parks and Calendar </p>
       </div>
     </div>
   </template>
