@@ -121,6 +121,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: 0% 100%;
   transition: background-size .7s, background-position .5s ease-in-out;
+  text-align: center;
 }
 .title-text:hover {
   background-size: 100% 100%;
