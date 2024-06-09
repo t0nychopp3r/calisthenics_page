@@ -4,7 +4,6 @@
     font-weight:500;
     font-size:16px;
     color:grey;
-  
     text-decoration:none;
   }
 body{
@@ -37,6 +36,7 @@ h2 {
   font-size: 16px;
   line-height: 28px;
   margin: 0 0 48px;
+  margin-left: 10px;
 }
 
 .container-index {
@@ -72,6 +72,14 @@ h2 {
   .container-about {
     grid-template-columns: 1fr; /* Switch to single column */
   }
+}
+
+/* Street parks page */
+
+.container-streeparks{
+  display: grid;
+  margin-top: 20px;
+  padding-left: 10px;
 }
 
 /* Title text animation */
@@ -124,7 +132,6 @@ h2 {
 /* Login / Profile page form */
 button,
 .button {
-  color: var(--button);
   border: var(--custom-border-button);
   background-color: var(--custom-bg-color-button);
   display: inline-block;
@@ -198,7 +205,6 @@ input[disabled] {
   align-items: center;
   justify-content: center;
   border: none;
-  background-color: #444444;
   text-transform: none !important;
   transition: all 0.2s ease;
 }
@@ -206,18 +212,20 @@ input[disabled] {
 .button_table_green {
   background-color: var(--custom-color-brand-button);
 }
-.form-workouts .button_table_green:hover,
-.form-workouts .button_table_red:hover{
-  background-color: #e2e8f0;
-}
 
 .button_table_red {
   background-color: rgb(216, 104, 13);
 }
 
+.form-workouts .button_table_green:hover,
+.form-workouts .button_table_red:hover{
+  background-color: #e2e8f0;
+}
+
 .input-row {
   display: flex;
   gap: 10px;
+  color: slategray;
 }
 
 .workout-input {
@@ -227,6 +235,7 @@ input[disabled] {
 .date-input {
   display: block;
   margin: 10px 0;
+  color: slategray;
 }
 
 .notes-input {
@@ -239,6 +248,7 @@ input[disabled] {
 
 .satisfaction-input {
   margin: 10px 0;
+  color: slategray;
 }
 
 .workout-logs table {
@@ -256,7 +266,7 @@ input[disabled] {
   font-size: 24px;
   line-height: 32px;
   margin: 0;
-  padding: 5px 5px; /* Reduced padding */
+  padding: 5px 5px;
   text-align: center;
   text-transform: uppercase;
 }

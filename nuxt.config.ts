@@ -18,11 +18,11 @@ export default defineNuxtConfig({
     '@nuxtjs/supabase'
   ],
   supabase:{
-    redirect: false,
+    redirect: true,
     redirectOptions: {
       login: '/login',
       callback: '/confirm',
-      include: undefined, // Define routes to include, if any
+      include: ['/workout_logger'], // Define routes to include, if any
       exclude: [], // Define routes to exclude, if any
       cookieRedirect: false,
     }
