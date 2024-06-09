@@ -12,8 +12,9 @@
 <template>
   <div class="container-logs">
     <div class="left-column">
+      <!-- Left Column placeholder -->
     </div>
-    <div class="middle-column">
+    <div class="middle-column-login">
       <p class="title-text">{{ message}} </p>
       <div class="container-login" style="padding: 50px 0 100px 0">
         <Account v-if="user" />
@@ -21,6 +22,7 @@
       </div>
     </div>
     <div class="right-column">
+      <!-- Right Column placeholder -->
     </div>
   </div>
 </template>

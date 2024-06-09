@@ -17,7 +17,7 @@ const { data } = await supabase
 
 if (data) {
   username.value = data.username
-  //website.value = data.website
+  website.value = data.website
   avatar_path.value = data.avatar_url
 }
 
@@ -63,38 +63,38 @@ async function signOut() {
 
 <template>
   <form class="form-widget" @submit.prevent="updateProfile">
-    <div class="center-column">
     <div>
-      <label for="email">Email</label>
-      <input id="email" type="text" :value="user.email" disabled />
-      <br/>
-      <br/>
-    </div>
-    <div>
-      <label for="username">Name</label>
-      <input id="username" type="text" v-model="username" />
-      <br/>
-      <br/>
-    </div>
-    <div>
-      <label for="website">Instagram</label>
-      <input id="website" type="url" v-model="website" />
-      <br/>
-      <br/>
-      <br/>
-    </div>
-    <div>
-      <input
-        type="submit"
-        class="button primary block"
-        :value="loading ? 'Loading ...' : 'Update'"
-        :disabled="loading"
-      />
-    </div>
-    <div>
-      <br/>
-      <button class="button block" @click="signOut" :disabled="loading">Sign Out</button>
-    </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="text" :value="user.email" disabled />
+        <br/>
+        <br/>
+      </div>
+      <div>
+        <label for="username">Name</label>
+        <input id="username" type="text" v-model="username" />
+        <br/>
+        <br/>
+      </div>
+      <div>
+        <label for="website">Instagram</label>
+        <input id="website" type="url" v-model="website" />
+        <br/>
+        <br/>
+        <br/>
+      </div>
+      <div>
+        <input
+          type="submit"
+          class="button primary block"
+          :value="loading ? 'Loading ...' : 'Update'"
+          :disabled="loading"
+        />
+      </div>
+      <div>
+        <br/>
+        <button class="button block" @click="signOut" :disabled="loading">Sign Out</button>
+      </div>
     </div>
   </form>
 </template>

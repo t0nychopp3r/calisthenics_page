@@ -168,7 +168,7 @@
 
 
 <template>
-      <div class="middle-column">
+      <div class="middle-column-logger">
         <p class="title-text">Welcome to your personal program space</p>
         <br/>
         <div class="form-workouts">

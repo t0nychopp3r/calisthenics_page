@@ -6,7 +6,7 @@
         The site is provided by the official <a href="https://www.street-workout.com/parks/">Street Workout</a> Team and provided as it is.<br>
         You can accept the cookies and then you can see the map with the parks. <br>
         </p>
-      <iframe src="https://www.street-workout.com/parks/" style="height:900px;width:100%;" title="Iframe Example"></iframe>
+      <iframe src="https://www.street-workout.com/parks/" style="height:900px;width:100%;" title="Streetworkout Parks"></iframe>
     </div>
 </template>
   

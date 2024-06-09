@@ -39,16 +39,46 @@ h2 {
   margin-left: 10px;
 }
 
+/* App vue container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+}
+
+.app-content {
+  flex: 1; /* Make the content area take up the remaining space */
+}
+
+/* Index page */
 .container-index {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px; /* Gap between columns */
+    gap: 20px;
 }
 
-.container-logs {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  gap: 20px;
+.middle-column-index{
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column-index, .right-column-index {
+  height: auto;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  .container-index {
+    grid-template-columns: 1fr 2fr 0fr; /* Two column layout for smaller screens */
+  }
+}
+@media (max-width: 600px) {
+  .container-index {
+    grid-template-columns: 0fr 1fr 0fr;
+  }
 }
 
 /* About page */
@@ -102,34 +132,16 @@ h2 {
     margin: 12px
 }
 
-.left-column, .middle-column, .right-column {
-  /* border: 3px solid #000000; /* Just for visualization */
+/* Login / Profile page form */
+
+.middle-column-login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 
-.middle-column{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.right-column {
-    height: auto;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.left-column {
-    height: auto;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Login / Profile page form */
 button,
 .button {
   border: var(--custom-border-button);
@@ -188,13 +200,15 @@ input[disabled] {
   color: var(--custom-color-secondary);
 }
 
-@media (max-width: 1000px) {
-  .container-index {
-    grid-template-columns: 0fr 3fr 1fr; /* Single column layout for smaller screens */
-  }
-}
-
 /* Workout form / table */
+
+.middle-column-logger{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
 .form-workouts {
   display: flex;
   flex-direction: column;
@@ -211,10 +225,12 @@ input[disabled] {
 
 .button_table_green {
   background-color: var(--custom-color-brand-button);
+  color: #444444;
 }
 
 .button_table_red {
   background-color: rgb(216, 104, 13);
+  color: #444444;
 }
 
 .form-workouts .button_table_green:hover,
