@@ -195,7 +195,6 @@
               <th>Workout Date</th>
               <th>Notes</th>
               <th>Satisfaction</th>
-              <th>Date / Time</th>
               <th class="button_col"></th>
             </tr>
           </thead>
@@ -222,7 +221,6 @@
                                                                             workoutLog.workout_name,
                                                                             workoutLog.notes,
                                                                             workoutLog.street_park,
-                                                                            workoutLog.workout_date,
                                                                             workoutLog.satisfaction)">Update</button>
                 <button class="button_table_red" @click="deleteWorkoutLog(workoutLog.id)">Delete</button>
               </td>
